@@ -45,7 +45,7 @@ public:
 };
 ```
 
-## Approach 3 [Moore Voting algorithm] :- 
+## Approach 3 [Moore Voting algorithm] :- This algorithm works on the fact that if an element occurs more than N/2 times, it means that the remaining elements other than this would definitely be less than N/2. So let us check the proceeding of the algorithm. First, choose a candidate from the given set of elements if it is the same as the candidate element, increase the votes. Otherwise, decrease the votes if votes become 0, select another new element as the new candidate.
 
 ```cpp
 // Time Complexity - O(n)         Space Complexity - O(1)
@@ -53,18 +53,15 @@ class Solution {
 public:
     int majorityElement(vector<int>& nums) {
         // Moore voting algorithm
-        int count = 0;
-        int element = 0;
+        int votes = 0;
+        int candidate = 0;
         for(int num : nums)
         {
-            if(count == 0)
-            {
-                element = num;
-            }
-            if(num == element) count++;
-            else count--;
+            if(votes == 0) candidate = num;
+            if(num == candidate) votes++;
+            else votes--;
         }
-        return element;
+        return candidate;
     }
 };
 ```
