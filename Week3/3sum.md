@@ -2,7 +2,7 @@
 
 ## Approach 1 :- In this approach, we'll traverse the array using nested 3 for loop and check the sum i.e. 0. It takes lot of time taking O(n^3) time complexity.
 
-## Approach 2 :- In this approach, we'll traverse the array to find first element and apply two sum approach for remaining two elements.
+## Approach 2 :- In this approach, we'll traverse the array to find first element and apply [two sum](https://github.com/Hg03/Grind75/blob/main/Week1/TwoSum.md) approach for remaining two elements.
 
 ```cpp
 // Time Complexity - O(n^2)            Space Complexity - O(1)
