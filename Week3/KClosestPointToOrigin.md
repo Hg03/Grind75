@@ -28,6 +28,8 @@ public:
 };
 ```
 
+
+**Whenever question includes find kth maximum, minimum, smallest and largest, max or min heap is the optimised solution**
 ## Approach 2 [MaxHeap] :- 
 
 ```cpp
