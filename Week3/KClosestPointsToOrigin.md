@@ -30,7 +30,12 @@ public:
 
 
 **Whenever question includes find kth maximum, minimum, smallest and largest, max or min heap is the optimised solution**
-## Approach 2 [MaxHeap] :- 
+
+**When we create priority queue in c++, bydefault it act as a maxHeap(means when we pop, it returns us the largest)**
+
+**If you require minHeap, make the elements negative while pushing, and when using top or printing it ,make it positive again**
+
+## Approach 2 [MaxHeap] :- In this approach, we'll use max heap using priority queue of vector(2D). We'll push the distance with its x and y coordinates upto k limit. If limit k exceeds, We'll pop from priority queue. Finally our queue contains minimum element. So just pop k element's coordinates.
 
 ```cpp
 class Solution {
@@ -59,3 +64,4 @@ public:
     }
 };
 ```
+[Learn more about priority queues](https://youtu.be/yAs3tONaf3s)
