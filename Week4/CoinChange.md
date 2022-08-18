@@ -41,44 +41,26 @@ public:
 };
 ```
 
-## Approach 2 [DP] :- In this approach, create an array of size amount(given) and keep all value to INT_MAX initially and then make first to be 0.
+## Approach 2 [DP] :- In this approach, create an array of size amount(given) and keep all value to amount+! initially and then make first to be 0. Now check for each indices , like at 1st indices, we see how many ways we can choose the coins to make amount equal to 1, then to 2(at 2 no. indices), then to 3 and so on to last of amount.
 
 ```cpp
 // Time Complexity - O(amount*coins.size())             Space Complexity - O(amount.size())
-class Solution {
+class Solution
+{
 public:
-    int coinChange(vector<int>& coins, int amount) {
-        // Initialize DP array with INT_MAX and dp[0]=0
-        int dp[amount+1];
-        dp[0]=0;
-        for(int i=1;i<=amount;++i)
-            dp[i] = INT_MAX;
-
-        int len = coins.size();
-
-        // Fill DP array from amount=1 to amount's actual value
-        for (int i = 1; i <= amount; ++i)
-        {
-            // Try to include all the coins one by one
-            for (int j = 0; j < len; ++j)
-            {
-                // If this coin is usable(value less than current amount)
-                if(coins[j] <= i){
-                    // What is the cost for rest of the amount
-                    // If I use this coin
-                    // eg. if amount=8 and coins[j]=5 then rest is min cost
-                    // for 8-5 = 3
-                    int rest = dp[i-coins[j]];
-                    // If including this coin gives lesser value 
-                    // than current min value then include it
-                    if(rest != INT_MAX && rest+1<dp[i]){
-                        // update min value for amount=i
-                        dp[i] = rest+1;
-                    }
-                }
-            }
-        }
-        return dp[amount]==INT_MAX ? -1 : dp[amount];
-    }
+     int coinChange(vector<int> &coins, int amount)
+     {
+         vector<int> dp(amount+1,amount+1);
+         dp[0] = 0;
+         
+         for(int coin : coins)
+         {
+             for(int i=coin;i<=amount;i++)
+             {
+                 dp[i] = min(dp[i],dp[i-coin]+1);
+             }
+         }
+         return dp[amount] <= amount ? dp[amount] : -1;
+     }
 };
 ```
