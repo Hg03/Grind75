@@ -4,7 +4,7 @@
 
 Intuition :- In this approach, we take one element at a time, and swap with itself then further next elements recursively and store its result in ans vector.
 
-![alt text](permutations.gif)
+![alt text]()
 
 ```cpp
 class Solution {
