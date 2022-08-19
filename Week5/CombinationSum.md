@@ -1,6 +1,10 @@
 [Problem Statement](https://leetcode.com/problems/combination-sum/)
 
-## Approach  :- 
+## Approach  :- In this approach, we'll iterate through array and perform take and leave element ,then do it recursively.
+**Base case**
+- if target == 0, we've found the combination, push it in answer vector.
+- if target < 0 , we should backtrack for some another element, so return.
+- if i == array.size(), return.
 
 ![alt text](https://github.com/Hg03/Grind75/blob/main/imgs/combination.jpeg)
 
