@@ -1,6 +1,6 @@
 [Problem Statement](https://leetcode.com/problems/time-based-key-value-store/)
 
-[Refer It]()https://youtu.be/fu2cD_6E8Hw)
+[Refer It](https://youtu.be/fu2cD_6E8Hw)
 
 ```cpp
 class TimeMap {
