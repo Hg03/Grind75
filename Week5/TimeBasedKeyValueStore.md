@@ -1,5 +1,7 @@
 [Problem Statement](https://leetcode.com/problems/time-based-key-value-store/)
 
+## Approach :- In this we simply has to create a dictionary which has key having multiple value according to timestamps(one key having multiple pairs). For **set** function ,simply push back in value with timestamp on key as a given parameters. For **get** function, we'll use binary search to find the value with given timestamps.
+
 [Refer It](https://youtu.be/fu2cD_6E8Hw)
 
 ```cpp
