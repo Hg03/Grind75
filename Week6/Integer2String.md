@@ -1,6 +1,6 @@
 [Problem Statement](https://leetcode.com/problems/integer-to-english-words/)
 
-## Approach :- In this approach, we'll simply extract divide the number by crore (100000000) for checking, how much crores are there, then concatenate in a string ('Ten crore ') , then divide by lakhs, then by thousand and so on we reach to the last.
+## Approach :- 
 
 ```cpp
 class Solution {
