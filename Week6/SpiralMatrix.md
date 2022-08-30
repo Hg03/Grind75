@@ -1,6 +1,6 @@
 [Problem Statement](https://leetcode.com/problems/spiral-matrix)
 
-## Approach - In this approach, we 
+## Approach - In this approach, we will create four pointer left, right, top and bottom. Then we start traversing left to right, when reaches to end, increment top, then traverse top to bottom, when reaches to end, decrement right, then traverse right to left, when reaches to end, decrement bottom and then traverse bottom to top, increment left.
 
 ```cpp
 class Solution {
