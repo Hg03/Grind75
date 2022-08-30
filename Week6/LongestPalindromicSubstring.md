@@ -80,19 +80,19 @@ public:
 - On the basis of previously filled values, we'll fill the remaining cells.
 
 Table Example :-   example string = "abaabc"            
-                                                       >    0   1  2  3  4  5
+                                                            0   1  2  3  4  5
                                                            
-                                                       > 0 [ 1, 0, 0, 0, 0, 0]
+                                                         0 [ 1, 0, 0, 0, 0, 0]
                                                        
-                                                       > 1 [ 0, 1, 0, 0, 0, 0]
+                                                         1 [ 0, 1, 0, 0, 0, 0]
                                                        
-                                                       > 2 [ 0, 0, 1, 1, 0, 0]
+                                                         2 [ 0, 0, 1, 1, 0, 0]
                                                        
-                                                       > 3 [ 0, 0, 0, 1, 0, 0]
+                                                         3 [ 0, 0, 0, 1, 0, 0]
                                                        
-                                                       > 4 [ 0, 0, 0, 0, 1, 0]
+                                                         4 [ 0, 0, 0, 0, 1, 0]
                                                        
-                                                       > 5 [ 0, 0, 0, 0, 0, 1]
+                                                         5 [ 0, 0, 0, 0, 0, 1]
 
 Now for remaining cells - 
                             if str[i] == str[j] && table[i+1][j-1] == 1
