@@ -34,7 +34,7 @@ public:
 };
 ```
 
-## Approach 2[Expand from center] :- In this approach, here we iterate element and check its neighbours, it both neighbours are equal we can consider it a palindrome and further goes with further neighbours and check for palindrome.
+## Approach 2[Expand from center] :- In this approach, here we iterate element and check its neighbours, if both neighbours are equal we can consider it a palindrome and further goes with further neighbours and check for palindrome.
 - In case of odd length, center is one element.
 - In case of even length, center is two element.
 
