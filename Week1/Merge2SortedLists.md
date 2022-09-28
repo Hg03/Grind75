@@ -38,6 +38,7 @@ public:
         if(list1 == NULL) return list2;
         if(list2 == NULL) return list1;
         ListNode *ans, *tail;
+        // Decide head for the resulted linked list
         if(list1->val < list2->val)
         {
             ans = list1;
@@ -50,6 +51,8 @@ public:
             tail = list2;
             list2 = list2->next;
         }
+        
+        // Traverse further
         while(list1 && list2)
         {
             if(list1->val < list2->val)
@@ -65,6 +68,8 @@ public:
                 list2 = list2->next;
             }
         }
+        
+        // Merging remaining linked list
         if(!list1) tail->next = list2;
         else tail->next = list1;
         
