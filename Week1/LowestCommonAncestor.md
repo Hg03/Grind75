@@ -55,24 +55,22 @@ public:
     }
 };
 ```
-## Approach 2 :- In this approach, traverse the tree by following some conditions :
-- if root is equal to p or q , return root.
-- if p present in left subtree and q present in right subtree ,return root.
-- if p and q both present in left or right subtree, simply traverse recursively.
-- if not p nor q found in any portion, return null.
+## Approach 2 :- In this approach, traverse the tree (preorder/postorder) by following some conditions :
+- While traversing, if we get value as one of the given node, return that node.
+- While traversing, if we get both node which are given return the root as that node is are lowest common ancestor.
+- From both side, if we get null and non null, return null, and if we get non null and non null, return root.
 
 ```cpp
 class Solution {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        if(root == NULL) return NULL;
-        if(root == p || root == q) return root;
+        if(root == NULL || root == p || root == q) return root;
         TreeNode* leftT = lowestCommonAncestor(root->left,p,q);
         TreeNode* rightT = lowestCommonAncestor(root->right,p,q);
         if(leftT == NULL) return rightT;
-        if(rightT == NULL) return leftT;
-        return root;
+        else if(rightT == NULL) return leftT;
+        else return root;
     }
 };
 ```
-[If confuse refer it](https://youtu.be/cOjLyASDJcc)
+[If confuse refer it](https://youtu.be/_-QHfMDde90)
