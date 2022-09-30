@@ -8,7 +8,7 @@ class Solution {
 public:
     int height(TreeNode* root){
         if(!root)
-            return -1;
+            return 1;
         int leftheight = height(root->left);
         int rightheight = height(root->right);
         return max(leftheight,rightheight) + 1;
