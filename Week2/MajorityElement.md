@@ -1,4 +1,4 @@
-[Problem Statement](https://leetcode.com/majority-element/)
+[Problem Statement](https://leetcode.com/problems/majority-element/)
 
 ## Approach 1 :- In this approach, we'll iterate array and check each number and its count, then if it's count is greater than majority count, return number else -1.
 
