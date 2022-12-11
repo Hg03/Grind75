@@ -1,6 +1,6 @@
 [Problem Statement](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
 
-## Approach 1 :- Finding all substrings of size (p) and cheacking if it is anagram or not.
+## Approach 1 :- Finding all substrings of size (p) and checking if it is anagram or not.
 
 ```cpp
 // TLEd
