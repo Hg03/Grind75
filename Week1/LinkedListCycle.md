@@ -37,3 +37,30 @@ public:
     }
 };
 ```
+
+## Approach 3 :- In this approach, we'll assign a flag to every node by changing the value to **Integer.MAX_VALUE** and if the flag matched we will return true otherwise false.
+
+```java
+
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        int max=Integer.MAX_VALUE;
+        if((head==null)||(head.next==null)){
+            return false;
+        }
+        else{
+            ListNode curNode=head; 
+            curNode.val=max;
+          while(curNode.next!=null){
+              curNode=curNode.next;
+              if(curNode.val==max){
+                  return true;
+              }
+              curNode.val=max;
+          }  
+          return false;
+        }
+    }
+}
+
+```
