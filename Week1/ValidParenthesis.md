@@ -6,7 +6,7 @@
 - Finally if stack becomes empty return true else false.
 
 
-##Solution in C++
+## Solution in C++
 
 ```cpp
 // Time Complexity - O(N)            Space Complexity - O(N)
@@ -28,7 +28,7 @@ public:
 };
 ```
 
-##Solution in Java
+## Solution in Java
 
 ```java
 
