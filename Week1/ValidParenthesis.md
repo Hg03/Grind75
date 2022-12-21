@@ -6,6 +6,8 @@
 - Finally if stack becomes empty return true else false.
 
 
+##Solution in C++
+
 ```cpp
 // Time Complexity - O(N)            Space Complexity - O(N)
 class Solution {
@@ -24,4 +26,77 @@ public:
         
     }
 };
+```
+
+##Solution in Java
+
+```java
+
+class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> brackets=new Stack<>();
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='{'){
+                brackets.push('{');
+            }
+            else if(s.charAt(i)=='('){
+                brackets.push('(');
+            }
+            else if(s.charAt(i)=='['){
+                brackets.push('[');
+            }
+            else if(s.charAt(i)==')'){
+                if(brackets.isEmpty()){
+                    return false;
+                }
+                else{
+                    if(brackets.peek()=='('){
+                        brackets.pop();
+                    }
+                    else{
+                        return false;
+                    }    
+                }
+                
+                    
+            }
+            else if(s.charAt(i)=='}'){
+                if(brackets.isEmpty()){
+                    return false;
+                }
+                else{
+                    if(brackets.peek()=='{'){
+                        brackets.pop();
+                    }
+                    else{
+                        return false;
+                    }    
+                }   
+            }
+            else {
+                if(brackets.isEmpty()){
+                    return false;
+                }
+                else{
+                    if(brackets.peek()=='['){
+                        brackets.pop();
+                    }
+                    else{
+                        return false;
+                    }    
+                }   
+            }
+
+        }
+            
+        if(brackets.isEmpty()){
+            return true;
+        }  
+        else{
+            return false;
+        }
+        
+    }
+}
+
 ```
