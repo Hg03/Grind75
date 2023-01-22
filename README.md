@@ -1,2 +1,2 @@
 # Grind75
-[List of problems](https://www.techinterviewhandbook.org/grind75)
+[List of problems](https://leetcode.com/list/o0acoi7c)
